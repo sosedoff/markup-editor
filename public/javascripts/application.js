@@ -71,12 +71,24 @@ function ui_calculate_window() {
   var offset_y = parseInt($("#editor_slider").css('top'));
 
   $("#editor_output").css('top', offset_y + 34).css('bottom', 0);
-  $("#content").width(window_width - 16);
-  $("#content").height(offset_y - 16);
+  
+  $("#editor_input").css('top', 30);
+  $("#editor_input").css('bottom', offset_y - 16);
+  $("#editor_input").css('height', offset_y);
+  $("#editor_input").css('width', $(window).width());
+  
+  $("#content").width($("#editor_input").width());
+  $("#content").height($("#editor_input").height() - 16);
 }
 
 function ui_refresh() {
   var offset_y = parseInt($("#editor_slider").css('top'));
-  $("#content").height(offset_y - 16);
+  $("#editor_input").css('top', 30);
+  $("#editor_input").css('bottom', offset_y - 16);
+  $("#editor_input").css('height', offset_y);
+  $("#editor_input").css('width', $(window).width());
+  
   $("#editor_output").css('top', offset_y + 34);
+  $("#content").css('width', $("#editor_input").width() - 32);
+  $("#content").css('height', offset_y - 16);
 }
