@@ -129,3 +129,8 @@ body {
   background-color: #EEE!important;
   border: none!important;
 }
+
+#editor_output ul li, #editor_output ol li {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
