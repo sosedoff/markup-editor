@@ -43,7 +43,7 @@ body {
 
 #editor_wrapper { background: #f8f8f8; }
 
-#editor_input { position: fixed; top: 30px; overflow: hidden; background: #ff00ff; width: 100%; height: 100%; }
+#editor_input { position: fixed; top: 30px; overflow: hidden; background: #fff; width: 100%; height: 100%; }
 #editor_output { z-index: 1; }
 
 #editor_slider { height: 4px; position: relative; background: #ccc; cursor: move; z-index: 2; }

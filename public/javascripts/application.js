@@ -77,7 +77,7 @@ function ui_calculate_window() {
   $("#editor_input").css('height', offset_y);
   $("#editor_input").css('width', $(window).width());
   
-  $("#content").width($("#editor_input").width());
+  $("#content").width($("#editor_input").width() - 16);
   $("#content").height($("#editor_input").height() - 16);
 }
 
@@ -89,6 +89,6 @@ function ui_refresh() {
   $("#editor_input").css('width', $(window).width());
   
   $("#editor_output").css('top', offset_y + 34);
-  $("#content").css('width', $("#editor_input").width() - 32);
+  $("#content").css('width', $("#editor_input").width() - 16);
   $("#content").css('height', offset_y - 16);
 }
