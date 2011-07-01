@@ -12,6 +12,8 @@ Online example
 
 Hosted on Heroku: http://markup.heroku.com
 
+Example document: http://markup.heroku.com/sample
+
 Installation
 ------------
 
