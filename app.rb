@@ -24,6 +24,11 @@ get '/' do
   erb :editor
 end
 
+get '/sample' do
+  @content = File.read(File.join(settings.root, 'README.md'))
+  erb :editor
+end
+
 post '/render' do
   content = params[:content].to_s
   markup = params[:markup].to_s

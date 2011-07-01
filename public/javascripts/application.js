@@ -43,6 +43,10 @@ $(document).ready(function() {
     }
     refresh_timeout = setTimeout(refresh, refresh_delay);
   });
+  
+  if ($("#content").val() != '') {
+    setTimeout(refresh, 300);
+  }
 });
 
 function percent_of(number, total) {
