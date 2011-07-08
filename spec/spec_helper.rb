@@ -22,15 +22,3 @@ end
 def fixture(file)
   File.read(File.join(fixture_path, file))
 end
-
-def basecamp(opts={})
-  Services::Basecamp.new(opts)
-end
-
-def campfire(opts={})
-  Services::Campfire.new(opts)
-end
-
-def postbin(opts={})
-  Services::Postbin.new(opts)
-end
