@@ -13,6 +13,11 @@ $(document).ready(function() {
     tabString: "  "
   });
 
+  $("#content").scroll(function(e) {
+    var pos = $(this).scrollTop();
+    $("#editor_output").scrollTop(pos);
+  });
+
   $("#editor_slider").draggable({
     axis: "y",
     containment: "parent",
