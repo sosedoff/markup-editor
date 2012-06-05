@@ -19,7 +19,7 @@ $(document).ready(function() {
   });
 
   $("#editor_slider").draggable({
-    axis: "y",
+    axis: "x",
     containment: "parent",
     drag: ui_refresh
   });
@@ -73,31 +73,36 @@ function ui_calculate_window() {
   var window_width = $(window).width();
   var window_height = $(window).height();
   var middle_height = percent_of(50, window_height - 30);
+  var middle_width = percent_of(50, window_width);
   
   $("#editor_wrapper").height(window_height - 30);
-  $("#editor_slider").css('top', middle_height);
 
-  var offset_y = parseInt($("#editor_slider").css('top'));
+  $("#editor_input").
+    css('top', 30).
+    css('bottom', 0).
+    css('height', window_height).
+    css('width', middle_width-2);
 
-  $("#editor_output").css('top', offset_y + 34).css('bottom', 0);
-  
-  $("#editor_input").css('top', 30);
-  $("#editor_input").css('bottom', offset_y - 16);
-  $("#editor_input").css('height', offset_y);
-  $("#editor_input").css('width', $(window).width());
+  $("#editor_slider").
+    css('top', 0).
+    css('bottom', 0).
+    css('left', middle_width-2).
+    css('height', window_height-30);
+
+  $("#editor_output").
+    css('top', 30).
+    css('left', middle_width+2).
+    css('right', 0).
+    css('bottom',0);
   
   $("#content").width($("#editor_input").width() - 16);
-  $("#content").height($("#editor_input").height() - 16);
+  $("#content").height($("#editor_input").height() - 46);
 }
 
 function ui_refresh() {
-  var offset_y = parseInt($("#editor_slider").css('top'));
-  $("#editor_input").css('top', 30);
-  $("#editor_input").css('bottom', offset_y - 16);
-  $("#editor_input").css('height', offset_y);
-  $("#editor_input").css('width', $(window).width());
-  
-  $("#editor_output").css('top', offset_y + 34);
-  $("#content").css('width', $("#editor_input").width() - 16);
-  $("#content").css('height', offset_y - 16);
+  var pos = parseInt($("#editor_slider").css('left'));
+
+  $("#editor_input").css('left', 0).css('width', pos-2);
+  $("#editor_output").css('left', pos+2);
+  $("#content").width($("#editor_input").width() - 16).height($("#editor_input").height() - 16);
 }

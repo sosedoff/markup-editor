@@ -43,10 +43,20 @@ body {
 
 #editor_wrapper { background: #f8f8f8; }
 
-#editor_input { position: fixed; top: 30px; overflow: hidden; background: #fff; width: 100%; height: 100%; }
-#editor_output { z-index: 1; }
+#editor_input { 
+  position: fixed; 
+  top: 30px; 
+  overflow: hidden; 
+  background: #fff; 
+  width: 100%; 
+  height: 100%; 
+}
 
-#editor_slider { height: 4px; position: relative; background: #ccc; cursor: move; z-index: 2; }
+#editor_output { 
+  z-index: 1; 
+}
+
+#editor_slider { width: 4px; position: relative; background: #ccc; cursor: move; z-index: 2; }
 #editor_slider:hover { background: #888; }
 
 .editor-output {
@@ -65,10 +75,17 @@ body {
   background: #f8f8f8;
 }
 
-#editor-output * { line-height: 1.4em; }
+#editor-output * { 
+  line-height: 1.4em; 
+}
 
-#editor_output a { color: #4183C4; text-decoration: none; }
-#editor_output a:hover { text-decoration: underline; }
+#editor_output a { 
+  color: #4183C4; text-decoration: none; 
+}
+
+#editor_output a:hover { 
+  text-decoration: underline; 
+}
 
 
 #editor_output p {
@@ -76,16 +93,20 @@ body {
   line-height: 1.5em!important;
 }
 
-#editor_output h1, #editor_output h2, #editor_output h3, #editor_output h4, #editor_output h5, #editor_output h6 { border: 0 !important; }
+#editor_output h1, #editor_output h2, #editor_output h3, #editor_output h4, #editor_output h5, #editor_output h6 { 
+  border: 0 !important; 
+}
 
-#editor_output  h1 {
+#editor_output h1 {
   font-size: 170%!important;
   border-top: 4px solid #AAA!important;
   padding-top: .5em!important;
   margin-top: 1.5em!important;
 }
 
-#editor_output  h1:first-child { border-top: none !important; margin-top: 0px !important; }
+#editor_output h1:first-child { 
+  border-top: none !important; margin-top: 0px !important; 
+}
 
 #editor_output h2 { 
   font-size: 150% !important;
@@ -94,7 +115,9 @@ body {
   padding-top: .5em !important;
 }
 
-#editor_output h3 { margin-top: 1em !important; }
+#editor_output h3 { 
+  margin-top: 1em !important; 
+}
 
 #editor_output pre, code {
   font: 12px 'Bitstream Vera Sans Mono','Courier',monospace;
