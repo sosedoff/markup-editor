@@ -14,8 +14,7 @@ $(document).ready(function() {
   });
 
   $("#content").scroll(function(e) {
-    var pos = $(this).scrollTop();
-    $("#editor_output").scrollTop(pos);
+    ui_update_scroll();
   });
 
   $("#editor_slider").draggable({
@@ -105,4 +104,22 @@ function ui_refresh() {
   $("#editor_input").css('left', 0).css('width', pos-2);
   $("#editor_output").css('left', pos+2);
   $("#content").width($("#editor_input").width() - 16).height($("#editor_input").height() - 16);
+}
+
+function ui_update_scroll() {
+  var input = {
+    size: $('#content').prop('scrollHeight'),
+    visibleSize: $('#content').height(),
+    position: $('#content').scrollTop()
+  };
+
+  var output = {
+    size: $('#editor_output').prop('scrollHeight'),
+    visibleSize: $('#editor_output').height(),
+    position: $('#editor_output').scrollTop()
+  };
+
+  var ratio = input.position / (input.size - input.visibleSize);
+  var pos = (output.size - output.visibleSize) * ratio;
+  $("#editor_output").scrollTop(pos);
 }
