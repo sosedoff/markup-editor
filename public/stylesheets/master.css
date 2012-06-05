@@ -26,20 +26,21 @@ body {
   overflow: hidden;
   background: #2D2D2D;
   padding: 0px 8px;
+  font: 13px Helvetica,arial,freesans,clean,sans-serif;
 }
 
-#menubar a { color: #eee; text-decoration: none; font-size: 12px; }
+#menubar a { color: #eee; text-decoration: none; font-weight: bold; line-height: 25px; }
 #menubar a:hover { text-decoration: underline; }
 #menubar ul { padding: 0px; margin: 0px; padding-top: 2px; }
 #menubar ul li { padding: 0px; margin: 0px; float: left; list-style: none; list-style-type: none; margin-right: 8px; }
-#menubar ul li.label { font-size: 11px; color: #999; height: 30px; line-height: 25px; }
+#menubar ul li.label { font-size: 13px; color: #666; height: 25px; line-height: 25px; }
 #manubar ul li.label span { display: inline-block; }
 #menubar ul li.logo { margin-right: 40px; }
-#menubar ul li.logo span { font-size: 11px; color: #666; }
+#menubar ul li.logo span { font-size: 11px; color: #666; margin-left: 2px; }
 #menubar ul li.logo a { color: #EAB71E; text-decoration: none; }
-#menubar ul li.switch { margin: 0px; }
-#menubar ul li.switch a { font-size: 11px; padding: 2px 4px; line-height: 14px !important; text-decoration: none !important; color: #888; display: inline-block; }
-#menubar ul li.switch a.selected { background: #4d4d4d; border-radius: 5px; color: #EEE; }
+#menubar ul li.switch { margin: 0px; height: 25px; }
+#menubar ul li.switch a { font-size: 13px; padding: 2px 4px; margin-top: 3px; line-height: 16px !important; text-decoration: none !important; color: #888; display: inline-block; }
+#menubar ul li.switch a.selected { background: #3A87AD; border-radius: 5px; color: #fff; }
 
 #editor_wrapper { background: #f8f8f8; }
 
