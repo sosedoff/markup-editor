@@ -36,17 +36,6 @@ Run via Thin:
     cd ~/path/markup-editor
     thin start -e production
 
-Run via Passenger:
-
-    server {
-      listen 80;
-      server_name your.host.name.com;
-      passenger_enabled on;
-      rails_env production;
-      rack_env production;
-      root /path/to/markup-editor/public;
-    }
-
 Contribution
 ------------
 
@@ -58,7 +47,7 @@ Contribution
 License
 -------
 
-Copyright &copy; 2011 Dan Sosedoff.
+Copyright &copy; 2011-2012 Dan Sosedoff.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
