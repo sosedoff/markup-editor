@@ -2,7 +2,7 @@ require 'bundler/setup'
 require 'docify'
 require 'sinatra'
 
-VERSION = '0.1.1'
+VERSION = '0.2.0'
 
 configure do
   set :views, 'app/views'
