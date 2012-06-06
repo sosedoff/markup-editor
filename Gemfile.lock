@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/sosedoff/docify.git
+  revision: dbe74888fe92708da88eddfb412bf58423c65f09
+  specs:
+    docify (1.0.7)
+      RedCloth (~> 4.2)
+      rdiscount (~> 1.6)
+      rdoc (~> 3.7)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -6,10 +15,6 @@ GEM
     crack (0.3.1)
     daemons (1.1.8)
     diff-lcs (1.1.3)
-    docify (1.0.7)
-      RedCloth (~> 4.2)
-      rdiscount (~> 1.6)
-      rdoc (~> 3.7)
     eventmachine (0.12.10)
     json (1.7.3)
     rack (1.4.1)
@@ -48,7 +53,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  docify (~> 1.0)
+  docify!
   rack-contrib (~> 1.1)
   rack-test (~> 0.6)
   rake (~> 0.9)

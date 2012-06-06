@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rake',                 '~> 0.9'
 gem 'rack-contrib',         '~> 1.1'
 gem 'sinatra',              '~> 1.3'
-gem 'docify',               '~> 1.0'
+gem 'docify', :github => 'sosedoff/docify'
 
 group :development do
   gem 'thin'
