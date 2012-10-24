@@ -1,6 +1,7 @@
 require 'bundler/setup'
 require 'docify'
 require 'sinatra'
+require './app/lib/highlight'
 
 VERSION = '0.2.0'
 
@@ -31,11 +32,11 @@ end
 
 post '/render' do
   content = params[:content].to_s
-  markup = params[:markup].to_s
+  markup  = params[:markup].to_s
   
   halt 400, "Content required" if content.empty?
   halt 400, "Markup required"  if markup.empty?
   halt 400, "Invalid markup"   if !Docify.valid_format?(params[:markup])
-  
-  Docify.render(params[:content], params[:markup])
+
+  Highlight.render(content, markup)
 end
