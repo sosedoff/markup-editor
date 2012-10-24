@@ -25,10 +25,7 @@ module Highlight
     def render(body, format, highlight=true)
       data = body.gsub(CODE_REGEX) do
         if highlight && !$1.to_s.empty?
-          str = $2
-          if $2.bytesize > 0 && str.empty?
-            str = "<pre>#{$2}</pre>"
-          end
+          str = "<pre>#{$2}</pre>"
         else
           str = "<pre>#{$2}</pre>"
         end
