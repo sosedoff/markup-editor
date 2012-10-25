@@ -22,11 +22,15 @@ body {
   padding: 8px;
 }
 #menubar {
-  height: 30px;
+  height: 29px;
+  border-bottom: 1px solid #989898;
   overflow: hidden;
-  background: #2D2D2D;
   padding: 0px 8px;
   font: 13px Helvetica, arial, freesans, clean, sans-serif;
+  background: #ebebeb;
+  filter: progid:dximagetransform.microsoft.gradient(GradientType=0, startColorstr='#ebebeb', endColorstr='#c8c8c8');
+  background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#c8c8c8));
+  background: -moz-linear-gradient(top, #ebebeb, #c8c8c8);
 }
 #menubar a {
   color: #eee;
@@ -52,7 +56,7 @@ body {
 }
 #menubar ul li.label {
   font-size: 13px;
-  color: #666;
+  color: #333;
   height: 25px;
   line-height: 25px;
 }
@@ -68,8 +72,9 @@ body {
   margin-left: 2px;
 }
 #menubar ul li.logo a {
-  color: #EAB71E;
+  color: #000;
   text-decoration: none;
+  text-shadow: #eee 0px 1px 0px;
 }
 #menubar ul li.switch {
   margin: 0px;
@@ -85,9 +90,9 @@ body {
   display: inline-block;
 }
 #menubar ul li.switch a.selected {
-  background: #3A87AD;
+  background: #fff;
   border-radius: 5px;
-  color: #fff;
+  color: #333;
 }
 #editor_wrapper {
   background: #f8f8f8;
@@ -178,8 +183,7 @@ h6 a {
 #editor_output h3 {
   margin-top: 1em !important;
 }
-#editor_output pre,
-#edit_output code {
+#editor_output pre, #edit_output code {
   /*font: 13px 'Bitstream Vera Sans Mono','Courier',monospace;*/
 
   font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace !important;

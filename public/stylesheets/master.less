@@ -22,25 +22,29 @@ body {
 #output { padding: 8px; }
 
 #menubar {
-  height: 30px;
+  height: 29px;
+  border-bottom: 1px solid #989898;
   overflow: hidden;
-  background: #2D2D2D;
   padding: 0px 8px;
   font: 13px Helvetica,arial,freesans,clean,sans-serif;
+  background: #ebebeb;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ebebeb',endColorstr='#c8c8c8');
+  background: -webkit-gradient(linear,left top,left bottom,from(#ebebeb),to(#c8c8c8));
+  background: -moz-linear-gradient(top,#ebebeb,#c8c8c8);
 }
 
 #menubar a { color: #eee; text-decoration: none; font-weight: bold; line-height: 25px; }
 #menubar a:hover { text-decoration: underline; }
 #menubar ul { padding: 0px; margin: 0px; padding-top: 2px; }
 #menubar ul li { padding: 0px; margin: 0px; float: left; list-style: none; list-style-type: none; margin-right: 8px; }
-#menubar ul li.label { font-size: 13px; color: #666; height: 25px; line-height: 25px; }
+#menubar ul li.label { font-size: 13px; color: #333; height: 25px; line-height: 25px; }
 #manubar ul li.label span { display: inline-block; }
 #menubar ul li.logo { margin-right: 40px; }
 #menubar ul li.logo span { font-size: 11px; color: #666; margin-left: 2px; }
-#menubar ul li.logo a { color: #EAB71E; text-decoration: none; }
+#menubar ul li.logo a { color: #000; text-decoration: none; text-shadow: #eee 0px 1px 0px; }
 #menubar ul li.switch { margin: 0px; height: 25px; }
 #menubar ul li.switch a { font-size: 13px; padding: 2px 4px; margin-top: 3px; line-height: 16px !important; text-decoration: none !important; color: #888; display: inline-block; }
-#menubar ul li.switch a.selected { background: #3A87AD; border-radius: 5px; color: #fff; }
+#menubar ul li.switch a.selected { background: #fff; border-radius: 5px; color: #333; }
 
 #editor_wrapper { background: #f8f8f8; }
 
