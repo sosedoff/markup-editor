@@ -32,7 +32,7 @@ end
 
 post '/render' do
   content = params[:content].to_s
-  markup  = params[:markup].to_s || 'markdown'
+  markup  = params[:markup] || 'markdown'
 
   if content.empty?
     return ""
