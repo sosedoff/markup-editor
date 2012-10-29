@@ -32,11 +32,15 @@ end
 
 post '/render' do
   content = params[:content].to_s
-  markup  = params[:markup].to_s
-  
-  halt 400, "Content required" if content.empty?
-  halt 400, "Markup required"  if markup.empty?
-  halt 400, "Invalid markup"   if !Docify.valid_format?(params[:markup])
+  markup  = params[:markup].to_s || 'markdown'
+
+  if content.empty?
+    return ""
+  end
+
+  if !Docify.valid_format?(params[:markup])
+    halt 400, "Invalid markup"
+  end
 
   Highlight.render(content, markup)
 end
