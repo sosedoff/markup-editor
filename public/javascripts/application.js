@@ -65,6 +65,14 @@ function refresh() {
 
   $.post('/render', params, function(resp) {
     $("#output").html(resp);
+    highlight_code();
+  });
+}
+
+/* Highlight code wrapped with <pre class='lang'> */
+function highlight_code() {
+  $('#output > pre').each(function(i, e) {
+    hljs.highlightBlock(e); 
   });
 }
 
