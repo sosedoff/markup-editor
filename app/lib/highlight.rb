@@ -24,11 +24,11 @@ module Highlight
     # @return [String] rendered html
     def render(body, format, highlight=true)
       data = body.gsub(CODE_REGEX) do
-        lang = $1 || 'text'
+        lang = $1 || 'no-highlight'
         if highlight && !$1.to_s.empty?
-          str = "<pre class='language-#{lang}'>#{$2}</pre>"
+          str = "<pre class='#{lang}'>#{$2}</pre>"
         else
-          str = "<pre class='language-#{lang}'>#{$2}</pre>"
+          str = "<pre class='#{lang}'>#{$2}</pre>"
         end
         str
       end
