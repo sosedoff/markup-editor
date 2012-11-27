@@ -5,9 +5,10 @@ gem 'rack-contrib',         '~> 1.1'
 gem 'sinatra',              '~> 1.3'
 gem 'docify',               '~> 1.0'
 gem 'foreman'
+gem 'thin'
 
 group :development do
-  gem 'thin'
+  gem 'shotgun'  
 end
 
 group :test do
