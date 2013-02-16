@@ -9,6 +9,11 @@ var refresh_timeout = null;
 $(document).ready(function() {
   ui_calculate_window();
 
+  window.onbeforeunload = function() {
+    var content = $.trim($("#content").val());
+    if (content.length > 0) return "You have unsaved document";
+  }
+
   $("#content").tabby({
     tabString: "  "
   });
