@@ -23,14 +23,11 @@ body {
 }
 #menubar {
   height: 29px;
-  border-bottom: 1px solid #989898;
+  border-bottom: 1px solid #ddd;
   overflow: hidden;
   padding: 0px 8px;
   font: 13px Helvetica, arial, freesans, clean, sans-serif;
-  background: #ebebeb;
-  filter: progid:dximagetransform.microsoft.gradient(GradientType=0, startColorstr='#ebebeb', endColorstr='#c8c8c8');
-  background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#c8c8c8));
-  background: -moz-linear-gradient(top, #ebebeb, #c8c8c8);
+  background: #f3f3f3;
 }
 #menubar a {
   color: #eee;
@@ -114,7 +111,7 @@ body {
 #editor_slider {
   width: 4px;
   position: relative;
-  background: #ccc;
+  background: #eee;
   cursor: move;
   z-index: 2;
 }
