@@ -3,7 +3,7 @@ require 'docify'
 require 'sinatra'
 require './app/lib/highlight'
 
-VERSION = '0.3.3'
+VERSION = '0.3.4'
 
 configure do
   set :views, 'app/views'
