@@ -5,13 +5,16 @@
 var current_markup = 'markdown';
 var refresh_delay = 300;
 var refresh_timeout = null;
+var document_changed = false;
 
 $(document).ready(function() {
   ui_calculate_window();
 
   window.onbeforeunload = function() {
-    var content = $.trim($("#content").val());
-    if (content.length > 0) return "You have unsaved document";
+    if (document_changed) {
+      var content = $.trim($("#content").val());
+      if (content.length > 0) return "You have unsaved document";
+    }
   }
 
   $("#content").tabby({
@@ -63,6 +66,8 @@ function percent_of(number, total) {
 }
 
 function refresh() {
+  document_changed = true;
+
   params = {
     content: $("#content").val(),
     markup: current_markup
