@@ -8,7 +8,7 @@ gem 'foreman',       '~> 0.60'
 gem 'thin',          '~> 1.0'
 
 group :test do
-  gem 'rspec',       '~> 2.12'
+  gem 'rspec',       '~> 2.13'
   gem 'rack-test',   '~> 0.6'
   gem 'webmock',     '~> 1.6'
 end
