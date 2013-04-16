@@ -34,6 +34,8 @@ assets do
     '/js/highlight.pack.js',
     '/js/application.js'
   ]
+
+  prebuild true
 end
 
 helpers do
