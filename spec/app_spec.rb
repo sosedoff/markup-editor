@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Application' do
-  context 'GET /' do
+  describe 'GET /' do
     it 'returns editor page' do
       get '/'
       last_response.should be_ok
@@ -10,25 +10,35 @@ describe 'Application' do
     end
   end
 
-  context 'POST /render' do
+  describe 'POST /render' do
     let(:render_url) { '/render' }
 
-    it 'returns an empty page' do
-      post render_url
-      last_response.should be_ok
+    context 'with no content' do
+      it 'renders empty page' do
+        post render_url
+
+        expect(last_response).to be_ok
+        expect(last_response.body).to be_empty
+      end
     end
 
-    it 'requires a valid markup' do
-      post render_url, :content => "Hello World", :markup => "invalidmarkup"
-      last_response.should_not be_ok
-      last_response.body.should match(/invalid markup/i)
+    context 'with invalid markup' do
+      it 'renders error message' do
+        post render_url, :content => "Hello World", :markup => "invalidmarkup"
+        
+        expect(last_response).not_to be_ok
+        expect(last_response.body).to match /invalid markup/i
+      end
     end
 
-    it 'returns content for markups' do
-      %w(markdown textile rdoc).each do |m|
-        post render_url, :content => "Hello world", :markup => m
-        last_response.should be_ok
-        last_response.body.should match(/Hello world/)
+    context 'with valid params' do
+      it 'renders generated content' do
+        %w(markdown textile rdoc).each do |m|
+          post render_url, :content => "Hello world", :markup => m
+          
+          expect(last_response).to be_ok
+          expect(last_response.body).to match /Hello world/
+        end
       end
     end
   end
