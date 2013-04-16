@@ -2,11 +2,12 @@ require 'spec_helper'
 
 describe 'Application' do
   describe 'GET /' do
-    it 'returns editor page' do
+    it 'renders editor page' do
       get '/'
-      last_response.should be_ok
-      last_response.body.should include "editor_output"
-      last_response.body.should include "editor_output"
+      
+      expect(last_response).to be_ok
+      expect(last_response.body).to include "editor_output"
+      expect(last_response.body).to include "editor_output"
     end
   end
 
