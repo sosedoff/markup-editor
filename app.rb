@@ -3,6 +3,7 @@ $LOAD_PATH << '.'
 require 'bundler/setup'
 require 'docify'
 require 'sinatra'
+require 'sinatra/assetpack'
 require 'app/lib/highlight'
 
 VERSION = '0.3.4'
@@ -15,6 +16,24 @@ configure :production do
   set :show_exceptions, false
   set :dump_errors,     false
   set :raise_errors,    false
+end
+
+assets do
+  serve '/js',  :from => 'app/js'
+  serve '/css', :from => 'app/css'
+
+  css :app, [
+    '/css/master.css',
+    '/css/github.css',
+  ]
+
+  js :app, [
+    'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+    'http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js',
+    '/js/tabby.js',
+    '/js/highlight.pack.js',
+    '/js/application.js'
+  ]
 end
 
 helpers do
