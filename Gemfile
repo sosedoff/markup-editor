@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rake',          '~> 0.9'
 gem 'rack-contrib',  '~> 1.1'
