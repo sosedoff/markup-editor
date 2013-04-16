@@ -28,8 +28,8 @@ assets do
   ]
 
   js :app, [
-    'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js',
-    'http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js',
+    '/js/jquery.min.js',
+    '/js/jquery-ui.min.js',
     '/js/tabby.js',
     '/js/highlight.pack.js',
     '/js/application.js'
