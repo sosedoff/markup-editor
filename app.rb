@@ -1,7 +1,9 @@
+$LOAD_PATH << '.'
+
 require 'bundler/setup'
 require 'docify'
 require 'sinatra'
-require './app/lib/highlight'
+require 'app/lib/highlight'
 
 VERSION = '0.3.4'
 
