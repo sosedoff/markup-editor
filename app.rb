@@ -43,6 +43,11 @@ helpers do
   def app_version
     VERSION
   end
+
+  def gist_content(id)
+    url = Faraday.get("https://gist.github.com/#{id}").headers['Location']
+    Faraday.get("#{url}/raw").body
+  end
 end
 
 get '/' do
@@ -51,6 +56,16 @@ end
 
 get '/sample' do
   @content = File.read(File.join(settings.root, 'README.md'))
+  erb :editor
+end
+
+get '/gist/:id' do
+  @content = gist_content(params[:id]) rescue nil
+
+  if @content.nil?
+    redirect '/'
+  end
+
   erb :editor
 end
 
