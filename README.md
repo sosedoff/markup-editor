@@ -8,12 +8,13 @@ Markup Editor is a tiny sinatra application to render html pages from markup doc
 - Multiple markups: Markdown, RDoc, Textile
 - Syntax highlighting
 - Github-like styles
+- Import gist documents
 
 ## Demo
 
-Check out live demo: [http://markup.heroku.com](http://markup.heroku.com)
-
-Example document: [http://markup.heroku.com/sample](http://markup.heroku.com/sample)
+- Live demo: [http://markup.heroku.com](http://markup.heroku.com)
+- Example document: [http://markup.heroku.com/sample](http://markup.heroku.com/sample)
+- Gist document: [http://markup.heroku.com/gist/959f04242b23c3e7573d](http://markup.heroku.com/gist/959f04242b23c3e7573d)
 
 ## Install
 
