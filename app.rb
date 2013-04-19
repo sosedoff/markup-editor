@@ -6,7 +6,7 @@ require 'sinatra'
 require 'sinatra/assetpack'
 require 'app/lib/highlight'
 
-VERSION = '0.3.6'
+VERSION = '0.3.7'
 
 configure do
   set :views, 'app/views'
