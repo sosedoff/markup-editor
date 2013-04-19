@@ -25,6 +25,7 @@ assets do
   css :app, [
     '/css/master.css',
     '/css/github.css',
+    '/css/jquery-ui.min.css'
   ]
 
   js :app, [

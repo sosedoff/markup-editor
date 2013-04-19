@@ -17,6 +17,11 @@ $(document).ready(function() {
     }
   }
 
+  $("li.html > a").click(function() {
+    $("#editor_dialog textarea").val($("#output").html());
+    $("#editor_dialog").dialog({width: 500});
+  });
+
   $("#content").tabby({
     tabString: "  "
   });

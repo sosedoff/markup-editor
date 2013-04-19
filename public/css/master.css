@@ -91,6 +91,24 @@ body {
   border-radius: 5px;
   color: #333;
 }
+#menubar ul li.html {
+  float: right;
+}
+#menubar ul li.html a {
+  color: #000;
+  text-decoration: none;
+  text-shadow: #eee 0px 1px 0px;
+}
+#editor_dialog {
+  padding: 0px;
+  display: none;
+}
+#editor_dialog textarea {
+  width: 490px;
+  height: 200px;
+  font-size: 12px;
+  margin-top: 8px;
+}
 #editor_wrapper {
   background: #f8f8f8;
 }
