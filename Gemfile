@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rake',                '~> 0.9'
+gem 'rake',                '~> 10.0'
 gem 'rack-contrib',        '~> 1.1'
 gem 'sinatra',             '~> 1.3'
 gem 'sinatra-assetpack',   '~> 0.1'

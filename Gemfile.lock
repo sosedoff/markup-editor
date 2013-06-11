@@ -27,7 +27,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (0.9.6)
+    rake (10.0.4)
     rdiscount (1.6.8)
     rdoc (3.12.2)
       json (~> 1.4)
@@ -69,7 +69,7 @@ DEPENDENCIES
   foreman (~> 0.60)
   rack-contrib (~> 1.1)
   rack-test (~> 0.6)
-  rake (~> 0.9)
+  rake (~> 10.0)
   rspec (~> 2.13)
   shotgun
   sinatra (~> 1.3)
